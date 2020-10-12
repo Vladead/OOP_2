@@ -16,8 +16,9 @@ fun main(args: Array<String>) {
     println(
         "Минимальная площадь: ${areas.minOrNull()} \n" +
                 "Максимальная площадь: ${areas.maxOrNull()} \n" +
-                "Минимальная периметр: ${perimeters.minOrNull()} \n" +
-                "Максимальная периметр: ${perimeters.maxOrNull()} \n"
+                "Минимальный периметр: ${perimeters.minOrNull()} \n" +
+                "Максимальный периметр: ${perimeters.maxOrNull()} \n" +
+                "Сумма площадей: ${list.sumByDouble { it -> it.calcArea() }}"
     )
 
 }
