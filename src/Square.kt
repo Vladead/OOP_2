@@ -1,4 +1,4 @@
-class Square(val a: Double) : Shape {
+class Square(private val a: Double) : Shape {
     override fun calcArea(): Double {
         return a * a
     }

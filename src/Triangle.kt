@@ -1,7 +1,7 @@
 import java.lang.IllegalArgumentException
 import kotlin.math.sqrt
 
-class Triangle(val a: Double, val b: Double, val c: Double) : Shape {
+class Triangle(private val a: Double, private val b: Double, private val c: Double) : Shape {
     init {
         if (a + b > c || a + c > b || b + c > a)
             throw IllegalArgumentException("Nonexistent triangle")
