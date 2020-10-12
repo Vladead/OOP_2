@@ -1,10 +1,9 @@
-class Square : Shape {
+class Square(val a: Double) : Shape {
     override fun calcArea(): Double {
-        TODO("Not yet implemented")
+        return a * a
     }
 
     override fun calcPerimeter(): Double {
-        TODO("Not yet implemented")
+        return 4 * a
     }
-
 }
