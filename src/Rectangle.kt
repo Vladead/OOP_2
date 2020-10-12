@@ -1,9 +1,14 @@
-class Rectangle : Shape {
+class Rectangle(private val length: Double, private val width: Double) : Shape {
+    init {
+        if (length <= 0 || width <=0)
+            throw IllegalArgumentException("Length and width must be positive")
+    }
+
     override fun calcArea(): Double {
-        TODO("Not yet implemented")
+        return length * width
     }
 
     override fun calcPerimeter(): Double {
-        TODO("Not yet implemented")
+        return 2 * (length + width)
     }
 }

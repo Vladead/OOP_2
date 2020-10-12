@@ -1,9 +1,17 @@
-class Circle : Shape {
+import kotlin.math.PI
+import kotlin.math.pow
+
+class Circle(private val radius: Double) : Shape {
+    init {
+        if (radius <= 0)
+            throw IllegalArgumentException("Radius must be positive")
+    }
+
     override fun calcArea(): Double {
-        TODO("Not yet implemented")
+        return PI * radius.pow(2)
     }
 
     override fun calcPerimeter(): Double {
-        TODO("Not yet implemented")
+        return 2 * PI * radius
     }
 }
