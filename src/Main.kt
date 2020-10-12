@@ -14,10 +14,10 @@ fun main(args: Array<String>) {
     }
 
     println(
-        "Минимальная площадь: ${minOf(areas.first(), areas.last())} \n" +
-                "Максимальная площадь: ${maxOf(areas.first(), areas.last())} \n" +
-                "Минимальная периметр: ${minOf(perimeters.first(), perimeters.last())} \n" +
-                "Максимальная периметр: ${maxOf(perimeters.first(), perimeters.last())}"
+        "Минимальная площадь: ${areas.minOrNull()} \n" +
+                "Максимальная площадь: ${areas.maxOrNull()} \n" +
+                "Минимальная периметр: ${perimeters.minOrNull()} \n" +
+                "Максимальная периметр: ${perimeters.maxOrNull()} \n"
     )
 
 }
