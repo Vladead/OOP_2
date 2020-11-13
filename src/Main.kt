@@ -6,19 +6,11 @@ fun main(args: Array<String>) {
         Triangle(5.0, 6.0, 7.0)
     )
 
-    val areas = arrayListOf<Double>()
-    val perimeters = arrayListOf<Double>()
-    for (i in list) {
-        areas.add(i.calcArea())
-        perimeters.add(i.calcPerimeter())
-    }
-
     println(
-        "Минимальная площадь: ${areas.minOrNull()} \n" +
-                "Максимальная площадь: ${areas.maxOrNull()} \n" +
-                "Минимальный периметр: ${perimeters.minOrNull()} \n" +
-                "Максимальный периметр: ${perimeters.maxOrNull()} \n" +
-                "Сумма площадей: ${list.sumByDouble { it -> it.calcArea() }}"
+        "Фигура с минимальной площадью: ${list.minByOrNull { it.calcArea() }} \n" +
+                "Фигура с максимальной площадью: ${list.maxByOrNull { it.calcArea() }} \n" +
+                "Фигура с минимальным периметром: ${list.minByOrNull { it.calcPerimeter() }} \n" +
+                "Фигура с максимальным периметром: ${list.maxByOrNull { it.calcPerimeter() }} \n" +
+                "Сумма площадей: ${list.sumByDouble { it.calcArea() }}"
     )
-
 }
