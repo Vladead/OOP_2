@@ -1,7 +1,7 @@
 import kotlin.math.PI
 import kotlin.math.pow
 
-class Circle(private val radius: Double) : Shape {
+class Circle(val radius: Double) : Shape {
     init {
         if (radius <= 0)
             throw IllegalArgumentException("Radius must be positive")

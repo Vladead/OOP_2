@@ -1,6 +1,6 @@
-class Rectangle(private val length: Double, private val width: Double) : Shape {
+class Rectangle(val length: Double, val width: Double) : Shape {
     init {
-        if (length <= 0 || width <=0)
+        if (length <= 0 || width <= 0)
             throw IllegalArgumentException("Length and width must be positive")
     }
 
